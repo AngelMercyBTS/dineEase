@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DineEase - Discover & Dine</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="bodybg">
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header class="main-header">
+    <div class="nav-container">
+
+        <a href="index.html" class="logo-link">
+            <img src="DineEase.png" alt="DineEase Logo" class="logo">
+        </a>
+
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="details.html">Details</a>
+            <a href="booking.html">Booking</a>
+            <a href="confirmation.html">Confirmation</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- =========================
+     HERO SECTION
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-background">
+
+        <div class="hero-slide slide1 active-slide"></div>
+        <div class="hero-slide slide2"></div>
+        <div class="hero-slide slide3"></div>
+        <div class="hero-slide slide4"></div>
+
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="hero-small-title">WELCOME TO DINEEASE</p>
+
+        <h1>Discover. Reserve. Dine.</h1>
+
+        <p class="hero-description">
+            Discover wonderful restaurants, choose your perfect table,
+            pre-order your favourite food and enjoy a comfortable dining
+            experience — all in one place.
+        </p>
+
+        <a href="explore.html" class="hero-button">
+            Explore Restaurants
+        </a>
+
+        <a href="#how-it-works" class="how-link">
+            How It Works <span>↓</span>
+        </a>
+
+    </div>
+
+
+    <!-- SLIDE DOTS -->
+
+    <div class="slide-dots">
+
+        <span class="dot active-dot" onclick="showSlide(1)"></span>
+        <span class="dot" onclick="showSlide(2)"></span>
+        <span class="dot" onclick="showSlide(3)"></span>
+        <span class="dot" onclick="showSlide(4)"></span>
+
+    </div>
+
+
+    <!-- SCROLL INDICATOR -->
+
+    <div class="scroll-down">
+        <span></span>
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<section class="home-intro">
+
+    <div class="section-decoration">
+        <span></span>
+        <i>✦</i>
+        <span></span>
+    </div>
+
+    <p class="section-small-title">
+        A BETTER WAY TO DINE
+    </p>
+
+    <h2>
+        More Than Just A Table Reservation
+    </h2>
+
+    <p class="intro-text">
+        DineEase brings restaurant discovery, table reservation,
+        food pre-ordering and parking information together in one
+        simple platform. Plan your dining experience before you even
+        step into the restaurant.
+    </p>
+
+</section>
+<section class="features-section">
+
+    <div class="section-title">
+        <h2>Everything You Need for a Better Dining Experience</h2>
+        <p>Discover, reserve and enjoy your favourite restaurants with DineEase.</p>
+    </div>
+
+    <div class="feature-container">
+
+        <!-- CARD 1 -->
+        <div class="feature-card">
+            <div class="feature-image">
+                <img src="discover.jpg" alt="Discover Restaurants">
+            </div>
+
+            <div class="feature-content">
+                <h3>Discover Restaurants</h3>
+                <p>Explore different restaurants, cuisines and dishes in one place.</p>
+                <a href="explore.html">Explore Restaurants →</a>
+            </div>
+        </div>
+
+
+        <!-- CARD 2 -->
+        <div class="feature-card">
+            <div class="feature-image">
+                <img src="table.jpg" alt="Choose Your Table">
+            </div>
+
+            <div class="feature-content">
+                <h3>Choose Your Table</h3>
+                <p>Select your preferred table and reserve it before you arrive.</p>
+                <a href="booking.html">Book A Table →</a>
+            </div>
+        </div>
+
+
+        <!-- CARD 3 -->
+        <div class="feature-card">
+            <div class="feature-image">
+                <img src="food.jpg" alt="Pre Order Food">
+            </div>
+
+            <div class="feature-content">
+                <h3>Pre-Order Food</h3>
+                <p>Choose your favourite dishes in advance and save time.</p>
+                <a href="booking.html">Pre-Order Food →</a>
+            </div>
+        </div>
+
+
+        <!-- CARD 4 -->
+        <div class="feature-card">
+            <div class="feature-image">
+                <img src="parking.jpg" alt="Parking Information">
+            </div>
+
+            <div class="feature-content">
+                <h3>Parking Information</h3>
+                <p>Check parking availability and information before visiting.</p>
+                <a href="explore.html">View Restaurants →</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     HOW DINEEASE WORKS
+========================================= -->
+
+<section class="how-it-works">
+
+    <div class="how-title">
+        <span>HOW IT WORKS</span>
+        <h2>How DineEase Works</h2>
+        <p>
+            From finding your restaurant to enjoying your meal,
+            DineEase makes dining simple.
+        </p>
+    </div>
+
+    <div class="steps-container">
+
+        <!-- STEP 01 -->
+        <div class="step-card">
+
+            <div class="step-number">01</div>
+
+            <div class="step-icon">
+                <div class="restaurant-visual">🍽</div>
+            </div>
+
+            <div class="step-content">
+                <h3>Choose a Restaurant</h3>
+                <p>
+                    Explore restaurants, cuisines and dishes
+                    available through DineEase.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- STEP 02 -->
+        <div class="step-card">
+
+            <div class="step-number">02</div>
+
+            <div class="step-icon">
+                <div class="restaurant-visual">▦</div>
+            </div>
+
+            <div class="step-content">
+                <h3>Select Your Table</h3>
+                <p>
+                    Pick your preferred date, time, guests
+                    and available table.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- STEP 03 -->
+        <div class="step-card">
+
+            <div class="step-number">03</div>
+
+            <div class="step-icon">
+                <div class="restaurant-visual">♨</div>
+            </div>
+
+            <div class="step-content">
+                <h3>Pre-Order Food</h3>
+                <p>
+                    Select your favourite dishes in advance
+                    for a smoother dining experience.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- STEP 04 -->
+        <div class="step-card">
+
+            <div class="step-number">04</div>
+
+            <div class="step-icon">
+                <div class="restaurant-visual">✓</div>
+            </div>
+
+            <div class="step-content">
+                <h3>Enjoy Your Meal</h3>
+                <p>
+                    Arrive at your restaurant, take your table
+                    and enjoy your dining experience.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+                   
+       
+<!-- =========================
+     CALL TO ACTION
+========================= -->
+
+<section class="home-cta">
+
+    <div class="cta-overlay"></div>
+
+    <div class="cta-content">
+
+        <p class="section-small-title">
+            READY TO DINE?
+        </p>
+
+        <h2>
+            Your Table Is Waiting.
+        </h2>
+
+        <p>
+            Discover your next dining destination and make
+            your reservation with DineEase.
+        </p>
+
+        <a href="explore.html" class="hero-button">
+            Explore Restaurants
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+
+            <img src="DineEase.png" alt="DineEase Logo">
+
+            <p>
+                Making restaurant discovery and table
+                reservation simple, convenient and enjoyable.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Explore</h3>
+
+            <a href="index.html">Home</a>
+            <a href="explore.html">Restaurants</a>
+            <a href="details.html">Restaurant Details</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Reservations</h3>
+
+            <a href="booking.html">Book A Table</a>
+            <a href="confirmation.html">Confirmation</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>DineEase</h3>
+
+            <p>
+                Discover. Reserve. Dine.
+            </p>
+
+            <p>
+                Your dining experience,
+                made easier.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 DineEase. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     SLIDESHOW JAVASCRIPT
+========================= -->
+
+<script>
+
+var currentSlide = 1;
+
+function showSlide(number) {
+
+    var slides = document.getElementsByClassName("hero-slide");
+    var dots = document.getElementsByClassName("dot");
+
+    currentSlide = number;
+
+    if (currentSlide > slides.length) {
+        currentSlide = 1;
+    }
+
+    if (currentSlide < 1) {
+        currentSlide = slides.length;
+    }
+
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active-slide");
+    }
+
+    for (var j = 0; j < dots.length; j++) {
+        dots[j].classList.remove("active-dot");
+    }
+
+    slides[currentSlide - 1].classList.add("active-slide");
+    dots[currentSlide - 1].classList.add("active-dot");
+}
+
+
+function nextSlide() {
+
+    currentSlide++;
+
+    if (currentSlide > 4) {
+        currentSlide = 1;
+    }
+
+    showSlide(currentSlide);
+}
+
+
+function startSlideshow() {
+
+    setInterval(function() {
+        nextSlide();
+    }, 5000);
+
+}
+
+
+showSlide(1);
+startSlideshow();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DineEase - Restaurant Details</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="details-page" id="top">
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="main-header">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo-link">
+                <img src="DineEase.png" alt="DineEase Logo" class="logo">
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="details.html" class="active">Details</a>
+                <a href="booking.html">Booking</a>
+                <a href="confirmation.html">Confirmation</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         RESTAURANT HERO
+         ===================================================== -->
+
+    <section class="details-hero">
+
+        <div class="details-hero-glow details-glow-one"></div>
+        <div class="details-hero-glow details-glow-two"></div>
+
+        <div class="details-hero-content">
+
+            <span class="details-small-label">
+                DINE • DISCOVER • ENJOY
+            </span>
+
+            <h1 id="restaurantName">
+                Spice Garden
+            </h1>
+
+            <p id="restaurantDescription">
+                Experience delicious food and a memorable dining atmosphere.
+            </p>
+
+            <div class="details-rating" id="restaurantRating">
+                ★ 4.5
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         RESTAURANT INFORMATION
+         ===================================================== -->
+
+    <main class="details-main">
+
+        <section class="restaurant-overview">
+
+            <div class="restaurant-overview-image">
+
+                <img
+                    id="restaurantImage"
+                    src="restaurant/restaurant1.jpg"
+                    alt="Restaurant"
+                >
+
+                <div class="overview-image-overlay"></div>
+
+                <span class="overview-tag" id="restaurantTag">
+                    Indian Restaurant
+                </span>
+
+            </div>
+
+
+            <div class="restaurant-overview-content">
+
+                <span class="details-section-label">
+                    ABOUT THE RESTAURANT
+                </span>
+
+                <h2 id="overviewTitle">
+                    Welcome to Spice Garden
+                </h2>
+
+                <p id="overviewDescription">
+                    Discover delicious food, warm hospitality and
+                    a comfortable dining experience at Spice Garden.
+                </p>
+
+
+                <!-- INFORMATION CARDS -->
+
+                <div class="restaurant-info-grid">
+
+                    <div class="restaurant-info-card">
+
+                        <span class="info-card-icon">01</span>
+
+                        <div>
+                            <small>Cuisine</small>
+                            <strong id="detailCuisine">
+                                Indian
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="restaurant-info-card">
+
+                        <span class="info-card-icon">02</span>
+
+                        <div>
+                            <small>Location</small>
+                            <strong id="detailLocation">
+                                City Centre
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="restaurant-info-card">
+
+                        <span class="info-card-icon">03</span>
+
+                        <div>
+                            <small>Price Range</small>
+                            <strong id="detailPrice">
+                                ₹₹
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="restaurant-info-card">
+
+                        <span class="info-card-icon">04</span>
+
+                        <div>
+                            <small>Opening Hours</small>
+                            <strong id="detailHours">
+                                11:00 AM - 11:00 PM
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FACILITIES -->
+
+                <div class="restaurant-facilities">
+
+                    <span>Parking</span>
+                    <span>Air Conditioning</span>
+                    <span>Wi-Fi</span>
+                    <span>Family Friendly</span>
+
+                </div>
+
+
+                <a
+                    href="booking.html"
+                    id="bookTableBtn"
+                    class="details-book-button"
+                >
+                    Book Your Table
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MENU SECTION
+             ================================================= -->
+
+        <section class="menu-section">
+
+            <div class="menu-heading">
+
+                <span class="details-section-label">
+                    FROM OUR KITCHEN
+                </span>
+
+                <h2>Popular Menu</h2>
+
+                <p>
+                    Take a look at some of the dishes available
+                    at this restaurant.
+                </p>
+
+            </div>
+
+
+            <!-- MENU CARDS -->
+
+            <div class="menu-grid">
+
+
+                <!-- FOOD 1 -->
+
+                <article class="menu-card">
+
+                    <div class="menu-image">
+
+                        <img
+                            id="food1Image"
+                            src="restaurant/spice/biryani.jpg"
+                            alt="Food"
+                        >
+
+                        <span class="menu-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <div class="menu-card-content">
+
+                        <span class="menu-category">
+                            CHEF'S SPECIAL
+                        </span>
+
+                        <h3 id="food1Name">
+                            Veg Biryani
+                        </h3>
+
+                        <p id="food1Description">
+                            Fragrant rice cooked with aromatic
+                            spices and fresh vegetables.
+                        </p>
+
+                        <div class="menu-bottom">
+
+                            <strong id="food1Price">
+                                ₹220
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FOOD 2 -->
+
+                <article class="menu-card">
+
+                    <div class="menu-image">
+
+                        <img
+                            id="food2Image"
+                            src="restaurant/spice/butter-chicken.jpg"
+                            alt="Food"
+                        >
+
+                        <span class="menu-number">
+                            02
+                        </span>
+
+                    </div>
+
+                    <div class="menu-card-content">
+
+                        <span class="menu-category">
+                            POPULAR
+                        </span>
+
+                        <h3 id="food2Name">
+                            Butter Chicken
+                        </h3>
+
+                        <p id="food2Description">
+                            Creamy and flavourful chicken
+                            cooked in a rich tomato gravy.
+                        </p>
+
+                        <div class="menu-bottom">
+
+                            <strong id="food2Price">
+                                ₹280
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FOOD 3 -->
+
+                <article class="menu-card">
+
+                    <div class="menu-image">
+
+                        <img
+                            id="food3Image"
+                            src="restaurant/spice/paneer-tikka.jpg"
+                            alt="Food"
+                        >
+
+                        <span class="menu-number">
+                            03
+                        </span>
+
+                    </div>
+
+                    <div class="menu-card-content">
+
+                        <span class="menu-category">
+                            FAVOURITE
+                        </span>
+
+                        <h3 id="food3Name">
+                            Paneer Tikka
+                        </h3>
+
+                        <p id="food3Description">
+                            Soft paneer pieces marinated with
+                            spices and grilled to perfection.
+                        </p>
+
+                        <div class="menu-bottom">
+
+                            <strong id="food3Price">
+                                ₹240
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FOOD 4 -->
+
+                <article class="menu-card">
+
+                    <div class="menu-image">
+
+                        <img
+                            id="food4Image"
+                            src="restaurant/spice/gulab-jamun.jpg"
+                            alt="Food"
+                        >
+
+                        <span class="menu-number">
+                            04
+                        </span>
+
+                    </div>
+
+                    <div class="menu-card-content">
+
+                        <span class="menu-category">
+                            DESSERT
+                        </span>
+
+                        <h3 id="food4Name">
+                            Gulab Jamun
+                        </h3>
+
+                        <p id="food4Description">
+                            Soft golden dumplings served
+                            with sweet sugar syrup.
+                        </p>
+
+                        <div class="menu-bottom">
+
+                            <strong id="food4Price">
+                                ₹100
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BOOKING CTA
+             ================================================= -->
+
+        <section class="details-booking-banner">
+
+            <div class="booking-banner-content">
+
+                <span>
+                    MAKE YOUR DINING SPECIAL
+                </span>
+
+                <h2>
+                    Your Table Is Waiting
+                </h2>
+
+                <p>
+                    Select your date, time, guests and preferred
+                    table and enjoy a hassle-free dining experience.
+                </p>
+
+                <a
+                    href="booking.html"
+                    id="bottomBookBtn"
+                    class="details-banner-button"
+                >
+                    Reserve a Table
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         BACK TO TOP
+         ===================================================== -->
+
+    <a href="#top" class="back-to-top">
+        ↑
+    </a>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="main-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <img
+                    src="DineEase.png"
+                    alt="DineEase Logo"
+                >
+
+                <p>
+                    Discover restaurants, reserve tables and
+                    enjoy a better dining experience.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <a href="index.html">Home</a>
+                <a href="explore.html">Restaurants</a>
+                <a href="details.html">Restaurant Details</a>
+                <a href="booking.html">Book a Table</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>DineEase</h4>
+
+                <a href="booking.html">Reservations</a>
+                <a href="confirmation.html">Confirmation</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 DineEase. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         RESTAURANT DATA
+         ===================================================== -->
+
+    <script>
+
+        const restaurants = {
+
+            spice: {
+                name: "Spice Garden",
+                image: "restaurants/restaurant1.jpg",
+                tag: "Indian Restaurant",
+                rating: "4.5",
+                description:
+                    "Experience rich Indian flavours, aromatic spices and delicious traditional dishes in a warm dining atmosphere.",
+                cuisine: "Indian",
+                location: "City Centre",
+                price: "₹₹",
+                parking: "Available",
+                hours: "11:00 AM - 11:00 PM",
+
+                food: [
+
+                    {
+                        name: "Veg Biryani",
+                        description:
+                            "Fragrant rice cooked with aromatic spices and fresh vegetables.",
+                        price: "₹220",
+                        image: "restaurants/spice/biryani.jpg"
+                    },
+
+                    {
+                        name: "Butter Chicken",
+                        description:
+                            "Creamy and flavourful chicken cooked in a rich tomato gravy.",
+                        price: "₹280",
+                        image: "restaurants/spice/butter-chicken.jpg"
+                    },
+
+                    {
+                        name: "Paneer Tikka",
+                        description:
+                            "Soft paneer pieces marinated with spices and grilled to perfection.",
+                        price: "₹240",
+                        image: "restaurants/spice/paneer-tikka.jpg"
+                    },
+
+                    {
+                        name: "Gulab Jamun",
+                        description:
+                            "Soft golden dumplings served with sweet sugar syrup.",
+                        price: "₹100",
+                        image: "restaurants/spice/gulab-jamun.jpg"
+                    }
+
+                ]
+            },
+
+
+            urban: {
+                name: "Urban Bites",
+                image: "restaurants/restaurant2.jpg",
+                tag: "Multi-Cuisine",
+                rating: "4.3",
+                description:
+                    "A modern restaurant serving delicious favourites from different cuisines in a stylish atmosphere.",
+                cuisine: "Multi-Cuisine",
+                location: "MG Road",
+                price: "₹₹",
+                parking: "Limited",
+                hours: "10:30 AM - 11:30 PM",
+
+                food: [
+
+                    {
+                        name: "Classic Burger",
+                        description:
+                            "Juicy grilled burger served with fresh vegetables and house sauce.",
+                        price: "₹220",
+                        image: "restaurants/urban/burger.jpg"
+                    },
+
+                    {
+                        name: "Cheese Pizza",
+                        description:
+                            "Cheesy pizza topped with fresh ingredients and herbs.",
+                        price: "₹280",
+                        image: "restaurants/urban/pizza.jpg"
+                    },
+
+                    {
+                        name: "White Sauce Pasta",
+                        description:
+                            "Creamy pasta prepared with herbs and a rich white sauce.",
+                        price: "₹240",
+                        image: "restaurants/urban/pasta.jpg"
+                    },
+
+                    {
+                        name: "Chocolate Cake",
+                        description:
+                            "Soft and rich chocolate cake perfect for dessert lovers.",
+                        price: "₹120",
+                        image: "restaurants/urban/cake.jpg"
+                    }
+
+                ]
+            },
+
+
+            royal: {
+                name: "Royal Feast",
+                image: "restaurants/restaurant3.jpg",
+                tag: "Fine Dining",
+                rating: "4.7",
+                description:
+                    "Experience elegant fine dining with premium dishes, beautiful interiors and sophisticated service.",
+                cuisine: "Fine Dining",
+                location: "Palace Road",
+                price: "₹₹₹",
+                parking: "Available",
+                hours: "12:00 PM - 11:30 PM",
+
+                food: [
+
+                    {
+                        name: "Grilled Steak",
+                        description:
+                            "Tender grilled steak prepared with herbs and rich seasoning.",
+                        price: "₹650",
+                        image: "restaurants/royal/steak.jpg"
+                    },
+
+                    {
+                        name: "Tandoori Chicken",
+                        description:
+                            "Juicy chicken marinated in spices and cooked in traditional style.",
+                        price: "₹450",
+                        image: "restaurants/royal/tandoori-chicken.jpg"
+                    },
+
+                    {
+                        name: "Royal Biryani",
+                        description:
+                            "Aromatic biryani prepared with premium ingredients and spices.",
+                        price: "₹350",
+                        image: "restaurants/royal/royal-biryani.jpg"
+                    },
+
+                    {
+                        name: "Caramel Pudding",
+                        description:
+                            "Smooth creamy pudding topped with delicious caramel.",
+                        price: "₹180",
+                        image: "restaurants/royal/pudding.jpg"
+                    }
+
+                ]
+            },
+
+
+            cafe: {
+                name: "Café Bliss",
+                image: "restaurants/restaurant4.jpg",
+                tag: "Cafe & Desserts",
+                rating: "4.4",
+                description:
+                    "Relax with freshly brewed coffee, tasty snacks and delicious desserts in a cosy cafe.",
+                cuisine: "Cafe & Desserts",
+                location: "Church Street",
+                price: "₹",
+                parking: "Limited",
+                hours: "9:00 AM - 10:30 PM",
+
+                food: [
+
+                    {
+                        name: "Cappuccino",
+                        description:
+                            "Freshly brewed coffee topped with smooth milk foam.",
+                        price: "₹140",
+                        image: "restaurants/cafe/cappuccino.jpg"
+                    },
+
+                    {
+                        name: "Veg Sandwich",
+                        description:
+                            "Fresh vegetables and cheese served between toasted bread.",
+                        price: "₹160",
+                        image: "restaurants/cafe/sandwich.jpg"
+                    },
+
+                    {
+                        name: "Kunafa",
+                        description:
+                            "A famous middle esatern desret made with crispy golden pastry layers melted cheese & sweet sugar syrup.",
+                        price: "₹250",
+                        image: "restaurants/cafe/kunafa.jpg"
+                    },
+
+                    {
+                        name: "Ice Cream",
+                        description:
+                            "Creamy and refreshing ice cream served as a sweet treat.",
+                        price: "₹120",
+                        image: "restaurants/cafe/ice-cream.jpg"
+                    }
+
+                ]
+            },
+
+
+            pizza: {
+                name: "Pizza Hub",
+                image: "restaurants/restaurant5.jpg",
+                tag: "Italian",
+                rating: "4.5",
+                description:
+                    "Enjoy freshly baked pizzas, creamy pasta and delicious Italian favourites.",
+                cuisine: "Italian",
+                location: "Koramangala",
+                price: "₹₹",
+                parking: "Available",
+                hours: "11:00 AM - 11:30 PM",
+
+                food: [
+
+                    {
+                        name: "Margherita Pizza",
+                        description:
+                            "Classic pizza topped with tomato, mozzarella and fresh herbs.",
+                        price: "₹250",
+                        image: "restaurants/pizza/margherita.jpg"
+                    },
+
+                    {
+                        name: "Farmhouse Pizza",
+                        description:
+                            "Loaded pizza topped with fresh vegetables and cheese.",
+                        price: "₹320",
+                        image: "restaurants/pizza/farmhouse.jpg"
+                    },
+
+                    {
+                        name: "Italian Pasta",
+                        description:
+                            "Delicious pasta cooked with herbs and Italian sauce.",
+                        price: "₹260",
+                        image: "restaurants/pizza/pasta.jpg"
+                    },
+
+                    {
+                        name: "Tiramisu",
+                        description:
+                            "Classic Italian dessert with coffee and creamy layers.",
+                        price: "₹180",
+                        image: "restaurants/pizza/tiramisu.jpg"
+                    }
+
+                ]
+            },
+
+
+            asian: {
+                name: "Asian Bowl",
+                image: "restaurants/restaurant6.jpg",
+                tag: "Asian Cuisine",
+                rating: "4.4",
+                description:
+                    "Discover flavourful noodles, rice bowls, momos and comforting Asian dishes.",
+                cuisine: "Asian",
+                location: "Indiranagar",
+                price: "₹₹",
+                parking: "Available",
+                hours: "11:00 AM - 11:00 PM",
+
+                food: [
+
+                    {
+                        name: "Hakka Noodles",
+                        description:
+                            "Stir-fried noodles tossed with vegetables and Asian sauces.",
+                        price: "₹220",
+                        image: "restaurants/asian/noodles.jpg"
+                    },
+
+                    {
+                        name: "Fried Rice",
+                        description:
+                            "Flavourful fried rice prepared with fresh vegetables and sauces.",
+                        price: "₹200",
+                        image: "restaurants/asian/fried-rice.jpg"
+                    },
+
+                    {
+                        name: "Momos",
+                        description:
+                            "Soft steamed dumplings served with spicy dipping sauce.",
+                        price: "₹160",
+                        image: "restaurants/asian/momos.jpg"
+                    },
+
+                    {
+                        name: "Ramen Bowl",
+                        description:
+                            "Warm and comforting ramen served with delicious toppings.",
+                        price: "₹280",
+                        image: "restaurants/asian/ramen.jpg"
+                    }
+
+                ]
+            },
+
+
+            taco: {
+                name: "Taco Town",
+                image: "restaurants/restaurant7.jpg",
+                tag: "Mexican",
+                rating: "4.3",
+                description:
+                    "Enjoy colourful Mexican flavours with tacos, wraps, nachos and refreshing drinks.",
+                cuisine: "Mexican",
+                location: "HSR Layout",
+                price: "₹₹",
+                parking: "Limited",
+                hours: "11:00 AM - 11:00 PM",
+
+                food: [
+
+                    {
+                        name: "Chicken Tacos",
+                        description:
+                            "Soft tacos filled with seasoned chicken and fresh toppings.",
+                        price: "₹220",
+                        image: "restaurants/taco/chicken-tacos.jpg"
+                    },
+
+                    {
+                        name: "Mexican Wrap",
+                        description:
+                            "Flavourful wrap filled with Mexican-style vegetables and sauces.",
+                        price: "₹200",
+                        image: "restaurants/taco/wrap.jpg"
+                    },
+
+                    {
+                        name: "Nachos",
+                        description:
+                            "Crispy nachos served with cheese and delicious Mexican toppings.",
+                        price: "₹180",
+                        image: "restaurants/taco/nachos.jpg"
+                    },
+
+                    {
+                        name: "Mexican Cooler",
+                        description:
+                            "Refreshing chilled drink inspired by Mexican flavours.",
+                        price: "₹120",
+                        image: "restaurants/taco/cooler.jpg"
+                    }
+
+                ]
+            },
+
+
+            coastal: {
+                name: "Coastal Kitchen",
+                image: "restaurants/restaurant8.jpg",
+                tag: "South Indian & Seafood",
+                rating: "4.6",
+                description:
+                    "Taste authentic coastal flavours with fresh seafood and traditional South Indian dishes.",
+                cuisine: "South Indian & Seafood",
+                location: "Jayanagar",
+                price: "₹₹",
+                parking: "Limited",
+                hours: "11:00 AM - 11:00 PM",
+
+                food: [
+
+                    {
+                        name: "Prawn Fry",
+                        description:
+                            "Fresh prawns marinated with coastal spices and fried to perfection.",
+                        price: "₹380",
+                        image: "restaurants/coastal/prawn-fry.jpg"
+                    },
+
+                    {
+                        name: "Fish Curry",
+                        description:
+                            "Traditional fish curry prepared with rich coastal spices.",
+                        price: "₹320",
+                        image: "restaurants/coastal/fish-curry.jpg"
+                    },
+
+                    {
+                        name: "Neer Dosa",
+                        description:
+                            "Soft and delicate South Indian rice crepes.",
+                        price: "₹120",
+                        image: "restaurants/coastal/neer-dosa.jpg"
+                    },
+
+                    {
+                        name: "Coconut Rice",
+                        description:
+                            "Fragrant rice cooked with coconut and traditional spices.",
+                        price: "₹180",
+                        image: "restaurants/coastal/coconut-rice.jpg"
+                    }
+
+                ]
+            }
+
+        };
+
+
+        /* =================================================
+           GET RESTAURANT FROM URL
+           ================================================= */
+
+        const params = new URLSearchParams(window.location.search);
+
+        const restaurantId =
+            params.get("restaurant") || "spice";
+
+        const restaurant =
+            restaurants[restaurantId] || restaurants.spice;
+
+
+        /* =================================================
+           RESTAURANT DETAILS
+           ================================================= */
+
+        document.getElementById("restaurantName").textContent =
+            restaurant.name;
+
+        document.getElementById("restaurantDescription").textContent =
+            restaurant.description;
+
+        document.getElementById("restaurantRating").textContent =
+            "★ " + restaurant.rating;
+
+        document.getElementById("restaurantImage").src =
+            restaurant.image;
+
+        document.getElementById("restaurantImage").alt =
+            restaurant.name;
+
+        document.getElementById("restaurantTag").textContent =
+            restaurant.tag;
+
+        document.getElementById("overviewTitle").textContent =
+            "Welcome to " + restaurant.name;
+
+        document.getElementById("overviewDescription").textContent =
+            restaurant.description;
+
+        document.getElementById("detailCuisine").textContent =
+            restaurant.cuisine;
+
+        document.getElementById("detailLocation").textContent =
+            restaurant.location;
+
+        document.getElementById("detailPrice").textContent =
+            restaurant.price;
+
+        document.getElementById("detailHours").textContent =
+            restaurant.hours;
+
+
+        /* =================================================
+           BOOKING BUTTONS
+           ================================================= */
+
+        document.getElementById("bookTableBtn").href =
+            "booking.html?restaurant=" + restaurantId;
+
+        document.getElementById("bottomBookBtn").href =
+            "booking.html?restaurant=" + restaurantId;
+
+
+        /* =================================================
+           MENU CARDS
+           ================================================= */
+
+        restaurant.food.forEach(function(food, index) {
+
+            const number = index + 1;
+
+            document.getElementById(
+                "food" + number + "Image"
+            ).src = food.image;
+
+            document.getElementById(
+                "food" + number + "Image"
+            ).alt = food.name;
+
+            document.getElementById(
+                "food" + number + "Name"
+            ).textContent = food.name;
+
+            document.getElementById(
+                "food" + number + "Description"
+            ).textContent = food.description;
+
+            document.getElementById(
+                "food" + number + "Price"
+            ).textContent = food.price;
+
+        });
+
+    </script>
+
+</body>
+</html>

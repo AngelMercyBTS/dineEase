@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DineEase - Book Your Table</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="booking-page">
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="DineEase.png" alt="DineEase">
+        </a>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="details.html">Details</a>
+        <a href="booking.html" class="active">Booking</a>
+        <a href="confirmation.html">Confirmation</a>
+    </nav>
+</header>
+
+
+<!-- =========================================================
+     BOOKING HERO
+========================================================= -->
+
+<section class="booking-hero">
+
+    <div class="booking-hero-content">
+
+        <span>SMART DINING RESERVATION</span>
+
+        <h1>Book Your Table</h1>
+
+        <p>
+            Reserve your table, choose your favourite dishes
+            and enjoy a comfortable dining experience.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MAIN BOOKING AREA
+========================================================= -->
+
+<main class="booking-container">
+
+    <!-- Restaurant name -->
+    <div class="booking-restaurant-banner">
+
+        <span>YOU ARE BOOKING AT</span>
+
+        <h2 id="restaurantDisplay">
+            Restaurant Name
+        </h2>
+
+        <p>
+            Select your preferred date, time, guests and table.
+        </p>
+
+    </div>
+
+
+    <form id="bookingForm"
+          action="confirmation.html"
+          onsubmit="saveBooking(event)">
+
+
+        <!-- =================================================
+             LEFT + RIGHT LAYOUT
+        ================================================== -->
+
+        <div class="booking-layout">
+
+
+            <!-- =================================================
+                 LEFT COLUMN
+            ================================================== -->
+
+            <div class="booking-form-column">
+
+
+                <!-- =================================================
+                     YOUR DETAILS
+                ================================================== -->
+
+                <div class="booking-card">
+
+                    <div class="booking-card-heading">
+
+                        <div class="heading-number">
+                            01
+                        </div>
+
+                        <div>
+                            <span>YOUR INFORMATION</span>
+                            <h2>Your Details</h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="guestName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="guestName"
+                                placeholder="Enter your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="guestPhone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="guestPhone"
+                                placeholder="Enter phone number"
+                                maxlength="10"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RESERVATION DETAILS
+                ================================================== -->
+
+                <div class="booking-card">
+
+                    <div class="booking-card-heading">
+
+                        <div class="heading-number">
+                            02
+                        </div>
+
+                        <div>
+                            <span>RESERVATION</span>
+                            <h2>Reservation Details</h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="bookingDate">
+                                Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="bookingDate"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="bookingTime">
+                                Time
+                            </label>
+
+                            <input
+                                type="time"
+                                id="bookingTime"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="bookingGuests">
+                            Number of Guests
+                        </label>
+
+                        <select id="bookingGuests" required>
+
+                            <option value="">
+                                Select number of guests
+                            </option>
+
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="7">7 Guests</option>
+                            <option value="8">8 Guests</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PARKING
+                ================================================== -->
+
+                <div class="parking-card">
+
+                    <div class="parking-symbol">
+                        P
+                    </div>
+
+                    <div class="parking-info">
+
+                        <span>PARKING</span>
+
+                        <h3>Parking Available</h3>
+
+                        <p>
+                            Parking information is provided for
+                            your convenience.
+                        </p>
+
+                    </div>
+
+                    <div class="parking-status">
+                        Available
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RIGHT COLUMN - FLOOR PLAN
+            ================================================== -->
+
+            <div class="blueprint-card">
+
+                <div class="blueprint-header">
+
+                    <div>
+
+                        <span>SELECT YOUR TABLE</span>
+
+                        <h2>Restaurant Floor Plan</h2>
+
+                        <p>
+                            Choose an available table from the floor plan.
+                        </p>
+
+                    </div>
+
+
+                    <div class="selected-table-display">
+
+                        <small>SELECTED TABLE</small>
+
+                        <strong id="selectedTableDisplay">
+                            None
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     BLUEPRINT
+                ================================================== -->
+
+                <div class="restaurant-blueprint"
+                     id="restaurantBlueprint">
+
+
+                    <!-- Restaurant areas -->
+
+                    <div class="blueprint-room reception-room">
+                        RECEPTION
+                    </div>
+
+
+                    <div class="blueprint-room kitchen-room">
+                        KITCHEN
+                    </div>
+
+
+                    <div class="blueprint-room bar-room">
+                        BAR / LOUNGE
+                    </div>
+
+
+                    <div class="blueprint-room dining-room">
+                        DINING AREA
+                    </div>
+
+
+                    <!-- TABLE 1 -->
+
+                    <button
+                        type="button"
+                        class="blueprint-table table-one"
+                        onclick="selectTable('Table 1')"
+                    >
+
+                        <span>01</span>
+                        <small>TABLE 1</small>
+
+                        <i class="chair chair-top"></i>
+                        <i class="chair chair-bottom"></i>
+                        <i class="chair chair-left"></i>
+                        <i class="chair chair-right"></i>
+
+                    </button>
+
+
+                    <!-- TABLE 2 -->
+
+                    <button
+                        type="button"
+                        class="blueprint-table table-two"
+                        onclick="selectTable('Table 2')"
+                    >
+
+                        <span>02</span>
+                        <small>TABLE 2</small>
+
+                        <i class="chair chair-top"></i>
+                        <i class="chair chair-bottom"></i>
+                        <i class="chair chair-left"></i>
+                        <i class="chair chair-right"></i>
+
+                    </button>
+
+
+                    <!-- TABLE 3 - BOOKED -->
+
+                    <button
+                        type="button"
+                        class="blueprint-table table-three booked"
+                        disabled
+                    >
+
+                        <span>03</span>
+                        <small>BOOKED</small>
+
+                    </button>
+
+
+                    <!-- TABLE 4 -->
+
+                    <button
+                        type="button"
+                        class="blueprint-table table-four"
+                        onclick="selectTable('Table 4')"
+                    >
+
+                        <span>04</span>
+                        <small>TABLE 4</small>
+
+                        <i class="chair chair-top"></i>
+                        <i class="chair chair-bottom"></i>
+                        <i class="chair chair-left"></i>
+                        <i class="chair chair-right"></i>
+
+                    </button>
+
+
+                    <!-- TABLE 5 -->
+
+                    <button
+                        type="button"
+                        class="blueprint-table round-table table-five"
+                        onclick="selectTable('Table 5')"
+                    >
+
+                        <span>05</span>
+                        <small>TABLE 5</small>
+
+                        <i class="chair chair-top"></i>
+                        <i class="chair chair-bottom"></i>
+                        <i class="chair chair-left"></i>
+                        <i class="chair chair-right"></i>
+
+                    </button>
+
+
+                    <!-- TABLE 6 -->
+
+                    <button
+                        type="button"
+                        class="blueprint-table table-six"
+                        onclick="selectTable('Table 6')"
+                    >
+
+                        <span>06</span>
+                        <small>TABLE 6</small>
+
+                        <i class="chair chair-top"></i>
+                        <i class="chair chair-bottom"></i>
+                        <i class="chair chair-left"></i>
+                        <i class="chair chair-right"></i>
+
+                    </button>
+
+
+                    <!-- Decorative plants -->
+
+                    <div class="blueprint-plant plant-one">
+                        ♧
+                    </div>
+
+                    <div class="blueprint-plant plant-two">
+                        ♧
+                    </div>
+
+
+                    <!-- Restroom -->
+
+                    <div class="blueprint-restroom">
+                        RESTROOM
+                    </div>
+
+
+                    <!-- Entrance -->
+
+                    <div class="blueprint-entrance">
+                        ENTRANCE
+                    </div>
+
+
+                </div>
+
+
+                <!-- Hidden selected table -->
+
+                <input
+                    type="hidden"
+                    id="selectedTable"
+                    value=""
+                >
+
+
+                <!-- Legend -->
+
+                <div class="blueprint-legend">
+
+                    <div>
+                        <span class="legend-box available"></span>
+                        Available
+                    </div>
+
+                    <div>
+                        <span class="legend-box selected"></span>
+                        Selected
+                    </div>
+
+                    <div>
+                        <span class="legend-box booked"></span>
+                        Booked
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             FOOD PRE-ORDER
+        ================================================== -->
+
+        <div class="booking-card food-booking-card">
+
+            <div class="booking-card-heading">
+
+                <div class="heading-number">
+                    03
+                </div>
+
+                <div>
+                    <span>PRE-ORDER</span>
+                    <h2>Choose Your Food</h2>
+                </div>
+
+            </div>
+
+
+            <p class="food-description">
+                Select dishes you would like to have ready when
+                you arrive at the restaurant.
+            </p>
+
+
+            <div class="food-grid">
+
+
+                <!-- FOOD 1 -->
+
+                <label class="food-option">
+
+                    <input
+                        type="checkbox"
+                        name="food"
+                        value="Butter Chicken"
+                    >
+
+                    <div class="food-option-content">
+
+                        <div class="food-icon">
+                            🍛
+                        </div>
+
+                        <div>
+
+                            <h3>Butter Chicken</h3>
+
+                            <p>
+                                Creamy and flavourful
+                                Indian chicken curry.
+                            </p>
+
+                        </div>
+
+                        <span class="food-check">
+                            ✓
+                        </span>
+
+                    </div>
+
+                </label>
+
+
+
+                <!-- FOOD 2 -->
+
+                <label class="food-option">
+
+                    <input
+                        type="checkbox"
+                        name="food"
+                        value="Paneer Tikka"
+                    >
+
+                    <div class="food-option-content">
+
+                        <div class="food-icon">
+                            🧀
+                        </div>
+
+                        <div>
+
+                            <h3>Paneer Tikka</h3>
+
+                            <p>
+                                Grilled paneer with
+                                Indian spices.
+                            </p>
+
+                        </div>
+
+                        <span class="food-check">
+                            ✓
+                        </span>
+
+                    </div>
+
+                </label>
+
+
+
+                <!-- FOOD 3 -->
+
+                <label class="food-option">
+
+                    <input
+                        type="checkbox"
+                        name="food"
+                        value="Biryani"
+                    >
+
+                    <div class="food-option-content">
+
+                        <div class="food-icon">
+                            🍚
+                        </div>
+
+                        <div>
+
+                            <h3>Biryani</h3>
+
+                            <p>
+                                Aromatic rice with
+                                delicious spices.
+                            </p>
+
+                        </div>
+
+                        <span class="food-check">
+                            ✓
+                        </span>
+
+                    </div>
+
+                </label>
+
+
+
+                <!-- FOOD 4 -->
+
+                <label class="food-option">
+
+                    <input
+                        type="checkbox"
+                        name="food"
+                        value="Chocolate Brownie"
+                    >
+
+                    <div class="food-option-content">
+
+                        <div class="food-icon">
+                            🍫
+                        </div>
+
+                        <div>
+
+                            <h3>Chocolate Brownie</h3>
+
+                            <p>
+                                Rich chocolate dessert
+                                to finish your meal.
+                            </p>
+
+                        </div>
+
+                        <span class="food-check">
+                            ✓
+                        </span>
+
+                    </div>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PAYMENT
+        ================================================== -->
+
+        <div class="booking-card payment-card">
+
+            <div class="booking-card-heading">
+
+                <div class="heading-number">
+                    04
+                </div>
+
+                <div>
+                    <span>PAYMENT</span>
+                    <h2>Choose Payment Method</h2>
+                </div>
+
+            </div>
+
+
+            <div class="payment-options">
+
+
+                <!-- ONLINE PAYMENT -->
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="online"
+                        required
+                    >
+
+                    <div class="payment-option-content">
+
+                        <div class="payment-icon">
+                            💳
+                        </div>
+
+                        <div>
+
+                            <h3>Demo Online Payment</h3>
+
+                            <p>
+                                Continue with a demo online
+                                payment for your project.
+                            </p>
+
+                        </div>
+
+                        <span class="payment-radio"></span>
+
+                    </div>
+
+                </label>
+
+
+
+                <!-- RESTAURANT PAYMENT -->
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="restaurant"
+                    >
+
+                    <div class="payment-option-content">
+
+                        <div class="payment-icon">
+                            💵
+                        </div>
+
+                        <div>
+
+                            <h3>Pay at Restaurant</h3>
+
+                            <p>
+                                Pay your bill directly at
+                                the restaurant.
+                            </p>
+
+                        </div>
+
+                        <span class="payment-radio"></span>
+
+                    </div>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SPECIAL REQUEST
+        ================================================== -->
+
+        <div class="booking-card">
+
+            <div class="booking-card-heading">
+
+                <div class="heading-number">
+                    05
+                </div>
+
+                <div>
+                    <span>OPTIONAL</span>
+                    <h2>Special Request</h2>
+                </div>
+
+            </div>
+
+
+            <textarea
+                id="bookingRequests"
+                rows="4"
+                placeholder="Birthday celebration, window seat, allergies, special occasion..."
+            ></textarea>
+
+        </div>
+
+
+
+        <!-- =================================================
+             BOOKING SUMMARY
+        ================================================== -->
+
+        <div class="booking-summary-card">
+
+            <div>
+
+                <span>READY TO DINE?</span>
+
+                <h2>
+                    Confirm Your Reservation
+                </h2>
+
+                <p>
+                    Your selected table, food and payment
+                    preference will be saved with your booking.
+                </p>
+
+            </div>
+
+
+            <div class="summary-table">
+
+                <div>
+
+                    <span>Restaurant</span>
+
+                    <strong id="summaryRestaurant">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>Table</span>
+
+                    <strong id="summaryTable">
+                        Not Selected
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="confirm-booking-btn"
+            >
+                Confirm Booking
+            </button>
+
+        </div>
+
+
+    </form>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <p>
+        © 2026 DineEase. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- =========================================================
+     BACKEND API (optional — page still works without it)
+========================================================= -->
+
+<script src="api.js"></script>
+
+<!-- =========================================================
+     BOOKING JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    /* =====================================================
+       RESTAURANT DATA
+    ===================================================== */
+
+    var restaurantNames = {
+
+        spice: "Spice Garden",
+        urban: "Urban Bites",
+        royal: "Royal Feast",
+        cafe: "Café Bliss",
+        pizza: "Pizza Hub",
+        asian: "Asian Bowl",
+        taco: "Taco Town",
+        coastal: "Coastal Kitchen"
+
+    };
+
+
+    /* =====================================================
+       GET RESTAURANT FROM URL
+       Example: booking.html?restaurant=spice
+    ===================================================== */
+
+    var urlParams =
+        new URLSearchParams(window.location.search);
+
+    var restaurantId =
+        urlParams.get("restaurant") || "spice";
+
+    var restaurantName =
+        restaurantNames[restaurantId] || "DineEase Restaurant";
+
+
+    /* =====================================================
+       SHOW RESTAURANT NAME
+    ===================================================== */
+
+    document.getElementById("restaurantDisplay").textContent =
+        restaurantName;
+
+    document.getElementById("summaryRestaurant").textContent =
+        restaurantName;
+
+
+    /* =====================================================
+       GIVE EACH RESTAURANT A DIFFERENT FLOOR PLAN
+    ===================================================== */
+
+    document.body.classList.add(
+        "layout-" + restaurantId
+    );
+
+
+
+    /* =====================================================
+       TABLE SELECTION
+    ===================================================== */
+
+    function selectTable(tableName) {
+
+        var tables =
+            document.querySelectorAll(".blueprint-table");
+
+        for (var i = 0; i < tables.length; i++) {
+
+            tables[i].classList.remove("selected");
+
+        }
+
+
+        var clickedTable =
+            document.querySelector(
+                '[onclick="selectTable(\'' +
+                tableName +
+                '\')"]'
+            );
+
+
+        if (clickedTable) {
+
+            clickedTable.classList.add("selected");
+
+        }
+
+
+        document.getElementById("selectedTable").value =
+            tableName;
+
+
+        document.getElementById("selectedTableDisplay")
+            .textContent = tableName;
+
+
+        document.getElementById("summaryTable")
+            .textContent = tableName;
+
+    }
+
+
+
+    /* =====================================================
+       FOOD SELECTION
+    ===================================================== */
+
+    var foodOptions =
+        document.querySelectorAll(".food-option");
+
+
+    for (var f = 0; f < foodOptions.length; f++) {
+
+        foodOptions[f]
+            .addEventListener("click", function () {
+
+                var checkbox =
+                    this.querySelector(
+                        'input[type="checkbox"]'
+                    );
+
+                if (!checkbox) {
+                    return;
+                }
+
+                /*
+                 * The label itself normally toggles the checkbox.
+                 * We only update the visual class here.
+                 */
+
+                setTimeout(function () {
+
+                    if (checkbox.checked) {
+
+                        checkbox
+                            .closest(".food-option")
+                            .classList.add("food-selected");
+
+                    } else {
+
+                        checkbox
+                            .closest(".food-option")
+                            .classList.remove("food-selected");
+
+                    }
+
+                }, 20);
+
+            });
+
+    }
+
+
+
+    /* =====================================================
+       SAVE BOOKING
+    ===================================================== */
+
+    function saveBooking(event) {
+
+        event.preventDefault();
+
+
+        var name =
+            document.getElementById("guestName")
+                .value.trim();
+
+
+        var phone =
+            document.getElementById("guestPhone")
+                .value.trim();
+
+
+        var date =
+            document.getElementById("bookingDate")
+                .value;
+
+
+        var time =
+            document.getElementById("bookingTime")
+                .value;
+
+
+        var guests =
+            document.getElementById("bookingGuests")
+                .value;
+
+
+        var table =
+            document.getElementById("selectedTable")
+                .value;
+
+
+        var requests =
+            document.getElementById("bookingRequests")
+                .value.trim();
+
+
+
+        /* -----------------------------------------------
+           CHECK TABLE
+        ------------------------------------------------ */
+
+        if (table === "") {
+
+            alert(
+                "Please select an available table from the floor plan."
+            );
+
+            return;
+
+        }
+
+
+
+        /* -----------------------------------------------
+           GET FOOD
+        ------------------------------------------------ */
+
+        var foodCheckboxes =
+            document.querySelectorAll(
+                'input[name="food"]:checked'
+            );
+
+
+        var foodItems = [];
+
+
+        for (var i = 0;
+             i < foodCheckboxes.length;
+             i++) {
+
+            foodItems.push(
+                foodCheckboxes[i].value
+            );
+
+        }
+
+
+        var food =
+            foodItems.length > 0
+            ? foodItems.join(", ")
+            : "No food selected";
+
+
+
+        /* -----------------------------------------------
+           GET PAYMENT
+        ------------------------------------------------ */
+
+        var paymentElement =
+            document.querySelector(
+                'input[name="payment"]:checked'
+            );
+
+
+        if (!paymentElement) {
+
+            alert(
+                "Please select a payment method."
+            );
+
+            return;
+
+        }
+
+
+        var payment =
+            paymentElement.value;
+
+
+        var paymentText =
+            payment === "online"
+            ? "Demo Online Payment"
+            : "Pay at Restaurant";
+
+
+
+        /* -----------------------------------------------
+           SAVE TO LOCAL STORAGE
+        ------------------------------------------------ */
+
+        localStorage.setItem(
+            "bookingRestaurant",
+            restaurantName
+        );
+
+
+        localStorage.setItem(
+            "bookingRestaurantId",
+            restaurantId
+        );
+
+
+        localStorage.setItem(
+            "bookingName",
+            name
+        );
+
+
+        localStorage.setItem(
+            "bookingPhone",
+            phone
+        );
+
+
+        localStorage.setItem(
+            "bookingDate",
+            date
+        );
+
+
+        localStorage.setItem(
+            "bookingTime",
+            time
+        );
+
+
+        localStorage.setItem(
+            "bookingGuests",
+            guests
+        );
+
+
+        localStorage.setItem(
+            "bookingTable",
+            table
+        );
+
+
+        localStorage.setItem(
+            "bookingFood",
+            food
+        );
+
+
+        localStorage.setItem(
+            "bookingRequests",
+            requests || "None"
+        );
+
+
+        localStorage.setItem(
+            "bookingParking",
+            "Available"
+        );
+
+
+        localStorage.setItem(
+            "bookingPayment",
+            paymentText
+        );
+
+
+
+        /* -----------------------------------------------
+           REDIRECT (shared by backend + fallback paths)
+        ------------------------------------------------ */
+
+        function goToConfirmation(extraParams) {
+
+            var confirmationURL =
+                "confirmation.html" +
+
+                "?restaurant=" +
+                encodeURIComponent(restaurantName) +
+
+                "&name=" +
+                encodeURIComponent(name) +
+
+                "&phone=" +
+                encodeURIComponent(phone) +
+
+                "&date=" +
+                encodeURIComponent(date) +
+
+                "&time=" +
+                encodeURIComponent(time) +
+
+                "&guests=" +
+                encodeURIComponent(guests) +
+
+                "&table=" +
+                encodeURIComponent(table) +
+
+                "&food=" +
+                encodeURIComponent(food) +
+
+                "&requests=" +
+                encodeURIComponent(
+                    requests || "None"
+                ) +
+
+                "&parking=Available" +
+
+                "&payment=" +
+                encodeURIComponent(paymentText) +
+
+                (extraParams || "");
+
+            window.location.href =
+                confirmationURL;
+
+        }
+
+
+        /* -----------------------------------------------
+           TRY BACKEND FIRST, FALL BACK TO LOCAL FLOW
+           Backend validates + blocks double-bookings.
+           If backend is not running, old behaviour is kept.
+        ------------------------------------------------ */
+
+        if (
+            window.DineEaseAPI &&
+            window.DineEaseAPI.createBooking
+        ) {
+
+            window.DineEaseAPI.createBooking({
+
+                restaurantId: restaurantId,
+                name: name,
+                phone: phone,
+                date: date,
+                time: time,
+                guests: guests,
+                table: table,
+                food: foodItems,
+                requests: requests || "None",
+                payment: payment
+
+            }).then(function (saved) {
+
+                goToConfirmation(
+                    "&ref=" +
+                    encodeURIComponent(saved.ref)
+                );
+
+            }).catch(function (err) {
+
+                var msg =
+                    (err && err.message) ||
+                    "Backend booking failed.";
+
+                /* Stay on page for 409 conflicts so the
+                   user can pick another table/slot. */
+                if (
+                    msg.indexOf("already booked") !== -1
+                ) {
+                    alert(msg);
+                    return;
+                }
+
+                /* Backend not running / unreachable?
+                   Fall back silently to the local flow —
+                   no scary popup for a normal demo. */
+                if (
+                    msg.indexOf("Failed to fetch") !== -1 ||
+                    msg.indexOf("NetworkError") !== -1 ||
+                    msg.indexOf("Load failed") !== -1
+                ) {
+                    goToConfirmation("");
+                    return;
+                }
+
+                /* Real backend-side validation error */
+                alert(msg);
+                goToConfirmation("");
+
+            });
+
+            return;
+
+        }
+
+        goToConfirmation("");
+
+    }
+
+
+
+    /* =====================================================
+       SET TODAY AS MINIMUM DATE
+    ===================================================== */
+
+    var today =
+        new Date();
+
+
+    var yyyy =
+        today.getFullYear();
+
+
+    var mm =
+        String(
+            today.getMonth() + 1
+        ).padStart(2, "0");
+
+
+    var dd =
+        String(
+            today.getDate()
+        ).padStart(2, "0");
+
+
+    document.getElementById("bookingDate").min =
+        yyyy + "-" + mm + "-" + dd;
+
+</script>
+
+</body>
+</html>

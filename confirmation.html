@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DineEase - Booking Confirmed</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ================================
+           DINEEASE CONFIRMATION PAGE
+           ================================ */
+
+        .confirmation-page {
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(168, 77, 56, 0.10), transparent 30%),
+                radial-gradient(circle at 90% 80%, rgba(64, 37, 31, 0.08), transparent 30%),
+                #f8f5f2;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .confirmation-page::before,
+        .confirmation-page::after {
+            content: "";
+            position: fixed;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            animation: confirmationFloat 8s ease-in-out infinite;
+        }
+
+        .confirmation-page::before {
+            top: 130px;
+            left: -120px;
+            background: rgba(168, 77, 56, 0.08);
+        }
+
+        .confirmation-page::after {
+            right: -120px;
+            bottom: 80px;
+            background: rgba(64, 37, 31, 0.07);
+            animation-delay: 2s;
+        }
+
+        @keyframes confirmationFloat {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-25px) scale(1.06);
+            }
+        }
+
+        /* Confirmation Hero */
+
+        .confirmation-hero {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 75px 20px 35px;
+        }
+
+        .success-circle {
+            width: 88px;
+            height: 88px;
+            margin: 0 auto 24px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 3px solid #a84d38;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 12px 35px rgba(64, 37, 31, 0.16);
+            animation: successPop 0.7s ease forwards;
+        }
+
+        .success-circle span {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #a84d38;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 31px;
+            font-weight: bold;
+        }
+
+        @keyframes successPop {
+            0% {
+                opacity: 0;
+                transform: scale(0.4);
+            }
+
+            70% {
+                transform: scale(1.12);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .confirmation-label {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #a84d38;
+            margin-bottom: 12px;
+        }
+
+        .confirmation-hero h1 {
+            margin: 0;
+            color: #40251f;
+            font-size: 42px;
+            font-weight: 800;
+        }
+
+        .confirmation-hero p {
+            margin: 13px auto 0;
+            max-width: 620px;
+            color: #725e58;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* Main Confirmation Area */
+
+        .confirmation-main {
+            position: relative;
+            z-index: 2;
+            width: 92%;
+            max-width: 850px;
+            margin: 0 auto 70px;
+        }
+
+        .booking-ticket {
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 55px rgba(64, 37, 31, 0.13);
+            border: 1px solid rgba(64, 37, 31, 0.08);
+            animation: ticketAppear 0.8s ease 0.15s both;
+        }
+
+        @keyframes ticketAppear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .ticket-top {
+            padding: 28px 32px;
+            background: linear-gradient(135deg, #40251f, #6b392d);
+            color: white;
+            position: relative;
+        }
+
+        .ticket-top::after {
+            content: "";
+            position: absolute;
+            right: 30px;
+            top: 20px;
+            width: 75px;
+            height: 75px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 50%;
+        }
+
+        .ticket-top small {
+            display: block;
+            color: rgba(255,255,255,0.65);
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 7px;
+        }
+
+        .ticket-top h2 {
+            margin: 0;
+            font-size: 27px;
+            font-weight: 700;
+        }
+
+        .ticket-top p {
+            margin: 7px 0 0;
+            color: rgba(255,255,255,0.78);
+            font-size: 14px;
+        }
+
+        /* Dashed divider */
+
+        .ticket-divider {
+            position: relative;
+            height: 20px;
+            background: #ffffff;
+        }
+
+        .ticket-divider::before {
+            content: "";
+            position: absolute;
+            left: 28px;
+            right: 28px;
+            top: 9px;
+            border-top: 2px dashed #ded4cf;
+        }
+
+        .ticket-divider::after {
+            content: "";
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            background: #f8f5f2;
+            border-radius: 50%;
+            left: -11px;
+            top: -1px;
+            box-shadow: 850px 0 0 #f8f5f2;
+        }
+
+        /* Booking information */
+
+        .booking-summary {
+            padding: 30px 32px 35px;
+        }
+
+        .booking-summary-title {
+            color: #40251f;
+            font-size: 18px;
+            margin: 0 0 22px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .summary-item {
+            padding: 17px 18px;
+            background: #faf8f6;
+            border: 1px solid #eee5e1;
+            border-radius: 14px;
+            transition: 0.3s ease;
+        }
+
+        .summary-item:hover {
+            transform: translateY(-3px);
+            border-color: rgba(168, 77, 56, 0.3);
+            box-shadow: 0 8px 20px rgba(64, 37, 31, 0.07);
+        }
+
+        .summary-item.full {
+            grid-column: 1 / -1;
+        }
+
+        .summary-label {
+            display: block;
+            color: #967f77;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .summary-value {
+            display: block;
+            color: #40251f;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        /* Food section */
+
+        .confirmation-extra {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .extra-card {
+            padding: 22px;
+            background: #fffaf7;
+            border: 1px solid #eee0da;
+            border-radius: 16px;
+        }
+
+        .extra-card h3 {
+            margin: 0 0 9px;
+            color: #40251f;
+            font-size: 16px;
+        }
+
+        .extra-card p {
+            margin: 0;
+            color: #725e58;
+            font-size: 14px;
+            line-height: 1.6;
+            word-break: break-word;
+        }
+
+        /* Bottom */
+
+        .confirmation-bottom {
+            text-align: center;
+            padding: 28px 32px 35px;
+            border-top: 1px solid #eee5e1;
+        }
+
+        .confirmation-bottom p {
+            margin: 0 0 20px;
+            color: #725e58;
+            font-size: 14px;
+        }
+
+        .home-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 190px;
+            padding: 14px 28px;
+            border-radius: 30px;
+            background: #a84d38;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            transition: 0.3s ease;
+            box-shadow: 0 10px 25px rgba(168, 77, 56, 0.24);
+        }
+
+        .home-button:hover {
+            background: #40251f;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(64, 37, 31, 0.2);
+        }
+
+        /* Responsive */
+
+        @media (max-width: 700px) {
+
+            .confirmation-hero {
+                padding-top: 50px;
+            }
+
+            .confirmation-hero h1 {
+                font-size: 32px;
+            }
+
+            .ticket-top {
+                padding: 24px;
+            }
+
+            .ticket-top h2 {
+                font-size: 23px;
+            }
+
+            .booking-summary {
+                padding: 25px 20px 30px;
+            }
+
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .summary-item.full {
+                grid-column: auto;
+            }
+
+            .confirmation-extra {
+                grid-template-columns: 1fr;
+            }
+
+            .confirmation-bottom {
+                padding: 25px 20px 30px;
+            }
+
+            .ticket-divider::after {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="confirmation-page">
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo-link">
+                <img src="DineEase.png" alt="DineEase Logo" class="logo">
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="details.html">Details</a>
+                <a href="booking.html">Booking</a>
+                <a href="confirmation.html" class="active">Confirmation</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- CONFIRMATION HERO -->
+    <section class="confirmation-hero">
+
+        <div class="success-circle">
+            <span>✓</span>
+        </div>
+
+        <span class="confirmation-label">DINEEASE RESERVATION</span>
+
+        <h1>Booking Confirmed!</h1>
+
+        <p>
+            Your table has been successfully reserved.
+            We look forward to welcoming you for a wonderful dining experience.
+        </p>
+
+    </section>
+
+
+    <!-- BOOKING TICKET -->
+    <main class="confirmation-main">
+
+        <div class="booking-ticket">
+
+            <!-- Ticket Header -->
+            <div class="ticket-top">
+                <small>Your Reservation</small>
+
+                <h2 id="confirmRestaurant">
+                    Restaurant Name
+                </h2>
+
+                <p>
+                    Your DineEase reservation details
+                </p>
+            </div>
+
+
+            <!-- Divider -->
+            <div class="ticket-divider"></div>
+
+
+            <!-- Booking Details -->
+            <div class="booking-summary">
+
+                <h3 class="booking-summary-title">
+                    Booking Details
+                </h3>
+
+                <div class="summary-grid">
+
+                    <div class="summary-item">
+                        <span class="summary-label">Guest Name</span>
+                        <span class="summary-value" id="confirmName">
+                            —
+                        </span>
+                    </div>
+
+                    <div class="summary-item">
+                        <span class="summary-label">Phone</span>
+                        <span class="summary-value" id="confirmPhone">
+                            —
+                        </span>
+                    </div>
+
+                    <div class="summary-item">
+                        <span class="summary-label">Date</span>
+                        <span class="summary-value" id="confirmDate">
+                            —
+                        </span>
+                    </div>
+
+                    <div class="summary-item">
+                        <span class="summary-label">Time</span>
+                        <span class="summary-value" id="confirmTime">
+                            —
+                        </span>
+                    </div>
+
+                    <div class="summary-item">
+                        <span class="summary-label">Guests</span>
+                        <span class="summary-value" id="confirmGuests">
+                            —
+                        </span>
+                    </div>
+
+                    <div class="summary-item">
+                        <span class="summary-label">Table</span>
+                        <span class="summary-value" id="confirmTable">
+                            —
+                        </span>
+                    </div>
+
+                    <div class="summary-item">
+                        <span class="summary-label">Parking</span>
+                        <span class="summary-value" id="confirmParking">
+                            —
+                        </span>
+                    </div>
+
+                    <div class="summary-item">
+                        <span class="summary-label">Payment</span>
+                        <span class="summary-value" id="confirmPayment">
+                            —
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- Food + Request -->
+                <div class="confirmation-extra">
+
+                    <div class="extra-card">
+                        <h3>Pre-Ordered Food</h3>
+
+                        <p id="confirmFood">
+                            No food selected
+                        </p>
+                    </div>
+
+                    <div class="extra-card">
+                        <h3>Special Request</h3>
+
+                        <p id="confirmRequests">
+                            None
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bottom -->
+            <div class="confirmation-bottom">
+
+                <p>
+                    Thank you for choosing DineEase. Enjoy your meal!
+                </p>
+
+                <a href="index.html" class="home-button">
+                    Back to Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <img src="DineEase.png" alt="DineEase Logo">
+                <p>
+                    Discover restaurants, reserve your table,
+                    and enjoy a better dining experience.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="booking.html">Booking</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>DineEase</h3>
+                <a href="details.html">Restaurant Details</a>
+                <a href="confirmation.html">Confirmation</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 DineEase. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <!-- BACK TO TOP -->
+    <a href="#top" class="back-to-top">↑</a>
+
+
+    <!-- CONFIRMATION JAVASCRIPT -->
+    <script src="api.js"></script>
+   <script>
+
+window.onload = function () {
+
+    /* =====================================================
+       GET URL DATA
+    ===================================================== */
+
+    var params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    var refParam = params.get("ref");
+
+    /* =====================================================
+       IF BACKEND GAVE US A REF, LOAD TRUTH FROM BACKEND
+       (prevents URL tampering + shows real saved booking)
+    ===================================================== */
+
+    if (
+        refParam &&
+        window.DineEaseAPI &&
+        window.DineEaseAPI.getBooking
+    ) {
+
+        window.DineEaseAPI.getBooking(refParam).then(function (b) {
+
+            setText("confirmRestaurant", b.restaurantName);
+            setText("confirmName", b.name);
+            setText("confirmPhone", b.phone);
+            setText("confirmDate", formatDate(b.date));
+            setText("confirmTime", b.time);
+            setText("confirmGuests",
+                b.guests + (b.guests === 1 ? " Guest" : " Guests"));
+            setText("confirmTable", b.table);
+            setText("confirmParking", b.parking || "Available");
+            setText("confirmPayment", b.paymentText);
+            setText("confirmFood",
+                (b.food && b.food.length ? b.food.join(", ") : "No food selected"));
+            setText("confirmRequests", b.requests || "None");
+
+        }).catch(function () {
+            /* backend unreachable — fall through to URL/localStorage */
+            fillFromUrlOrStorage();
+        });
+
+        return;
+
+    }
+
+    fillFromUrlOrStorage();
+
+
+    /* =====================================================
+       HELPERS + LEGACY FILL (URL first, localStorage second)
+    ===================================================== */
+
+    function setText(id, value) {
+        document.getElementById(id).textContent = value || "—";
+    }
+
+    function formatDate(date) {
+        if (!date) return "—";
+        var d = new Date(date + "T00:00:00");
+        if (isNaN(d.getTime())) return date;
+        return d.toLocaleDateString("en-IN", {
+            day: "2-digit", month: "short", year: "numeric"
+        });
+    }
+
+    function fillFromUrlOrStorage() {
+
+    function getValue(urlName, storageName) {
+
+        var urlValue =
+            params.get(urlName);
+
+
+        if (
+            urlValue !== null &&
+            urlValue !== ""
+        ) {
+
+            return urlValue;
+
+        }
+
+
+        var storageValue =
+            localStorage.getItem(storageName);
+
+
+        if (
+            storageValue !== null &&
+            storageValue !== ""
+        ) {
+
+            return storageValue;
+
+        }
+
+
+        return "";
+
+    }
+
+
+
+    /* =====================================================
+       RESTAURANT
+    ===================================================== */
+
+    var restaurant =
+        getValue(
+            "restaurant",
+            "bookingRestaurant"
+        );
+
+
+    document.getElementById(
+        "confirmRestaurant"
+    ).textContent =
+        restaurant || "DineEase Restaurant";
+
+
+
+    /* =====================================================
+       NAME
+    ===================================================== */
+
+    var name =
+        getValue(
+            "name",
+            "bookingName"
+        );
+
+
+    document.getElementById(
+        "confirmName"
+    ).textContent =
+        name || "—";
+
+
+
+    /* =====================================================
+       PHONE
+    ===================================================== */
+
+    var phone =
+        getValue(
+            "phone",
+            "bookingPhone"
+        );
+
+
+    document.getElementById(
+        "confirmPhone"
+    ).textContent =
+        phone || "—";
+
+
+
+    /* =====================================================
+       DATE
+    ===================================================== */
+
+    var date =
+        getValue(
+            "date",
+            "bookingDate"
+        );
+
+
+    if (date !== "") {
+
+        var dateObject =
+            new Date(
+                date + "T00:00:00"
+            );
+
+
+        if (
+            !isNaN(
+                dateObject.getTime()
+            )
+        ) {
+
+            document.getElementById(
+                "confirmDate"
+            ).textContent =
+                dateObject.toLocaleDateString(
+                    "en-IN",
+                    {
+                        day: "2-digit",
+                        month: "short",
+                        year: "numeric"
+                    }
+                );
+
+        } else {
+
+            document.getElementById(
+                "confirmDate"
+            ).textContent =
+                date;
+
+        }
+
+    } else {
+
+        document.getElementById(
+            "confirmDate"
+        ).textContent =
+            "—";
+
+    }
+
+
+
+    /* =====================================================
+       TIME
+    ===================================================== */
+
+    var time =
+        getValue(
+            "time",
+            "bookingTime"
+        );
+
+
+    document.getElementById(
+        "confirmTime"
+    ).textContent =
+        time || "—";
+
+
+
+    /* =====================================================
+       GUESTS
+    ===================================================== */
+
+    var guests =
+        getValue(
+            "guests",
+            "bookingGuests"
+        );
+
+
+    if (guests !== "") {
+
+        document.getElementById(
+            "confirmGuests"
+        ).textContent =
+            guests +
+            (
+                guests === "1"
+                ? " Guest"
+                : " Guests"
+            );
+
+    } else {
+
+        document.getElementById(
+            "confirmGuests"
+        ).textContent =
+            "—";
+
+    }
+
+
+
+    /* =====================================================
+       TABLE
+    ===================================================== */
+
+    var table =
+        getValue(
+            "table",
+            "bookingTable"
+        );
+
+
+    document.getElementById(
+        "confirmTable"
+    ).textContent =
+        table || "—";
+
+
+
+    /* =====================================================
+       PARKING
+    ===================================================== */
+
+    var parking =
+        getValue(
+            "parking",
+            "bookingParking"
+        );
+
+
+    document.getElementById(
+        "confirmParking"
+    ).textContent =
+        parking || "Available";
+
+
+
+    /* =====================================================
+       PAYMENT
+    ===================================================== */
+
+    var payment =
+        getValue(
+            "payment",
+            "bookingPayment"
+        );
+
+
+    document.getElementById(
+        "confirmPayment"
+    ).textContent =
+        payment || "—";
+
+
+
+    /* =====================================================
+       FOOD
+    ===================================================== */
+
+    var food =
+        getValue(
+            "food",
+            "bookingFood"
+        );
+
+
+    document.getElementById(
+        "confirmFood"
+    ).textContent =
+        food || "No food selected";
+
+
+
+    /* =====================================================
+       SPECIAL REQUEST
+    ===================================================== */
+
+    var requests =
+        getValue(
+            "requests",
+            "bookingRequests"
+        );
+
+
+    document.getElementById(
+        "confirmRequests"
+    ).textContent =
+        requests || "None";
+
+    } /* end fillFromUrlOrStorage */
+
+};
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Dependencies
+backend/node_modules/
+
+# SQLite database (auto-created + seeded on first run)
+backend/data/dineease.db
+*.db
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
