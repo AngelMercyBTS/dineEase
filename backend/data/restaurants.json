@@ -1,0 +1,210 @@
+[
+  {
+    "id": "spice",
+    "name": "Spice Garden",
+    "tag": "Indian Restaurant",
+    "cuisine": "Indian",
+    "location": "City Centre",
+    "price": "₹₹",
+    "rating": 4.5,
+    "hours": "11:00 AM - 11:00 PM",
+    "parking": "Available",
+    "description": "Experience rich Indian flavours, aromatic spices and delicious traditional dishes in a warm dining atmosphere.",
+    "tables": [
+      { "id": "Table 1", "seats": 4 },
+      { "id": "Table 2", "seats": 4 },
+      { "id": "Table 3", "seats": 4 },
+      { "id": "Table 4", "seats": 6 },
+      { "id": "Table 5", "seats": 2 },
+      { "id": "Table 6", "seats": 8 }
+    ],
+    "menu": [
+      { "name": "Veg Biryani", "price": 220, "description": "Fragrant rice cooked with aromatic spices and fresh vegetables." },
+      { "name": "Butter Chicken", "price": 280, "description": "Creamy and flavourful chicken cooked in a rich tomato gravy." },
+      { "name": "Paneer Tikka", "price": 240, "description": "Soft paneer pieces marinated with spices and grilled to perfection." },
+      { "name": "Gulab Jamun", "price": 100, "description": "Soft golden dumplings served with sweet sugar syrup." }
+    ]
+  },
+  {
+    "id": "urban",
+    "name": "Urban Bites",
+    "tag": "Multi-Cuisine",
+    "cuisine": "Multi-Cuisine",
+    "location": "MG Road",
+    "price": "₹₹",
+    "rating": 4.3,
+    "hours": "10:30 AM - 11:30 PM",
+    "parking": "Limited",
+    "description": "A modern restaurant serving delicious favourites from different cuisines in a stylish atmosphere.",
+    "tables": [
+      { "id": "Table 1", "seats": 4 },
+      { "id": "Table 2", "seats": 4 },
+      { "id": "Table 3", "seats": 4 },
+      { "id": "Table 4", "seats": 6 },
+      { "id": "Table 5", "seats": 2 },
+      { "id": "Table 6", "seats": 8 }
+    ],
+    "menu": [
+      { "name": "Classic Burger", "price": 220, "description": "Juicy grilled burger served with fresh vegetables and house sauce." },
+      { "name": "Cheese Pizza", "price": 280, "description": "Cheesy pizza topped with fresh ingredients and herbs." },
+      { "name": "White Sauce Pasta", "price": 240, "description": "Creamy pasta prepared with herbs and a rich white sauce." },
+      { "name": "Chocolate Cake", "price": 120, "description": "Soft and rich chocolate cake perfect for dessert lovers." }
+    ]
+  },
+  {
+    "id": "royal",
+    "name": "Royal Feast",
+    "tag": "Fine Dining",
+    "cuisine": "Fine Dining",
+    "location": "Palace Road",
+    "price": "₹₹₹",
+    "rating": 4.7,
+    "hours": "12:00 PM - 11:30 PM",
+    "parking": "Available",
+    "description": "Experience elegant fine dining with premium dishes, beautiful interiors and sophisticated service.",
+    "tables": [
+      { "id": "Table 1", "seats": 4 },
+      { "id": "Table 2", "seats": 4 },
+      { "id": "Table 3", "seats": 4 },
+      { "id": "Table 4", "seats": 6 },
+      { "id": "Table 5", "seats": 2 },
+      { "id": "Table 6", "seats": 8 }
+    ],
+    "menu": [
+      { "name": "Grilled Steak", "price": 650, "description": "Tender grilled steak prepared with herbs and rich seasoning." },
+      { "name": "Tandoori Chicken", "price": 450, "description": "Juicy chicken marinated in spices and cooked in traditional style." },
+      { "name": "Royal Biryani", "price": 350, "description": "Aromatic biryani prepared with premium ingredients and spices." },
+      { "name": "Caramel Pudding", "price": 180, "description": "Smooth creamy pudding topped with delicious caramel." }
+    ]
+  },
+  {
+    "id": "cafe",
+    "name": "Café Bliss",
+    "tag": "Cafe & Desserts",
+    "cuisine": "Cafe & Desserts",
+    "location": "Church Street",
+    "price": "₹",
+    "rating": 4.4,
+    "hours": "9:00 AM - 10:30 PM",
+    "parking": "Limited",
+    "description": "Relax with freshly brewed coffee, tasty snacks and delicious desserts in a cosy cafe.",
+    "tables": [
+      { "id": "Table 1", "seats": 4 },
+      { "id": "Table 2", "seats": 4 },
+      { "id": "Table 3", "seats": 4 },
+      { "id": "Table 4", "seats": 6 },
+      { "id": "Table 5", "seats": 2 },
+      { "id": "Table 6", "seats": 8 }
+    ],
+    "menu": [
+      { "name": "Cappuccino", "price": 140, "description": "Freshly brewed coffee topped with smooth milk foam." },
+      { "name": "Veg Sandwich", "price": 160, "description": "Fresh vegetables and cheese served between toasted bread." },
+      { "name": "Kunafa", "price": 250, "description": "Crispy golden pastry layers with melted cheese and sweet sugar syrup." },
+      { "name": "Ice Cream", "price": 120, "description": "Creamy and refreshing ice cream served as a sweet treat." }
+    ]
+  },
+  {
+    "id": "pizza",
+    "name": "Pizza Hub",
+    "tag": "Italian",
+    "cuisine": "Italian",
+    "location": "Koramangala",
+    "price": "₹₹",
+    "rating": 4.5,
+    "hours": "11:00 AM - 11:30 PM",
+    "parking": "Available",
+    "description": "Enjoy freshly baked pizzas, creamy pasta and delicious Italian favourites.",
+    "tables": [
+      { "id": "Table 1", "seats": 4 },
+      { "id": "Table 2", "seats": 4 },
+      { "id": "Table 3", "seats": 4 },
+      { "id": "Table 4", "seats": 6 },
+      { "id": "Table 5", "seats": 2 },
+      { "id": "Table 6", "seats": 8 }
+    ],
+    "menu": [
+      { "name": "Margherita Pizza", "price": 250, "description": "Classic pizza topped with tomato, mozzarella and fresh herbs." },
+      { "name": "Farmhouse Pizza", "price": 320, "description": "Loaded pizza topped with fresh vegetables and cheese." },
+      { "name": "Italian Pasta", "price": 260, "description": "Delicious pasta cooked with herbs and Italian sauce." },
+      { "name": "Tiramisu", "price": 180, "description": "Classic Italian dessert with coffee and creamy layers." }
+    ]
+  },
+  {
+    "id": "asian",
+    "name": "Asian Bowl",
+    "tag": "Asian Cuisine",
+    "cuisine": "Asian",
+    "location": "Indiranagar",
+    "price": "₹₹",
+    "rating": 4.4,
+    "hours": "11:00 AM - 11:00 PM",
+    "parking": "Available",
+    "description": "Discover flavourful noodles, rice bowls, momos and comforting Asian dishes.",
+    "tables": [
+      { "id": "Table 1", "seats": 4 },
+      { "id": "Table 2", "seats": 4 },
+      { "id": "Table 3", "seats": 4 },
+      { "id": "Table 4", "seats": 6 },
+      { "id": "Table 5", "seats": 2 },
+      { "id": "Table 6", "seats": 8 }
+    ],
+    "menu": [
+      { "name": "Hakka Noodles", "price": 220, "description": "Stir-fried noodles tossed with vegetables and Asian sauces." },
+      { "name": "Fried Rice", "price": 200, "description": "Flavourful fried rice prepared with fresh vegetables and sauces." },
+      { "name": "Momos", "price": 160, "description": "Soft steamed dumplings served with spicy dipping sauce." },
+      { "name": "Ramen Bowl", "price": 280, "description": "Warm and comforting ramen served with delicious toppings." }
+    ]
+  },
+  {
+    "id": "taco",
+    "name": "Taco Town",
+    "tag": "Mexican",
+    "cuisine": "Mexican",
+    "location": "HSR Layout",
+    "price": "₹₹",
+    "rating": 4.3,
+    "hours": "11:00 AM - 11:00 PM",
+    "parking": "Limited",
+    "description": "Enjoy colourful Mexican flavours with tacos, wraps, nachos and refreshing drinks.",
+    "tables": [
+      { "id": "Table 1", "seats": 4 },
+      { "id": "Table 2", "seats": 4 },
+      { "id": "Table 3", "seats": 4 },
+      { "id": "Table 4", "seats": 6 },
+      { "id": "Table 5", "seats": 2 },
+      { "id": "Table 6", "seats": 8 }
+    ],
+    "menu": [
+      { "name": "Chicken Tacos", "price": 220, "description": "Soft tacos filled with seasoned chicken and fresh toppings." },
+      { "name": "Mexican Wrap", "price": 200, "description": "Flavourful wrap filled with Mexican-style vegetables and sauces." },
+      { "name": "Nachos", "price": 180, "description": "Crispy nachos served with cheese and delicious Mexican toppings." },
+      { "name": "Mexican Cooler", "price": 120, "description": "Refreshing chilled drink inspired by Mexican flavours." }
+    ]
+  },
+  {
+    "id": "coastal",
+    "name": "Coastal Kitchen",
+    "tag": "South Indian & Seafood",
+    "cuisine": "South Indian & Seafood",
+    "location": "Jayanagar",
+    "price": "₹₹",
+    "rating": 4.6,
+    "hours": "11:00 AM - 11:00 PM",
+    "parking": "Limited",
+    "description": "Taste authentic coastal flavours with fresh seafood and traditional South Indian dishes.",
+    "tables": [
+      { "id": "Table 1", "seats": 4 },
+      { "id": "Table 2", "seats": 4 },
+      { "id": "Table 3", "seats": 4 },
+      { "id": "Table 4", "seats": 6 },
+      { "id": "Table 5", "seats": 2 },
+      { "id": "Table 6", "seats": 8 }
+    ],
+    "menu": [
+      { "name": "Prawn Fry", "price": 380, "description": "Fresh prawns marinated with coastal spices and fried to perfection." },
+      { "name": "Fish Curry", "price": 320, "description": "Traditional fish curry prepared with rich coastal spices." },
+      { "name": "Neer Dosa", "price": 120, "description": "Soft and delicate South Indian rice crepes." },
+      { "name": "Coconut Rice", "price": 180, "description": "Fragrant rice cooked with coconut and traditional spices." }
+    ]
+  }
+]
